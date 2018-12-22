@@ -1,55 +1,51 @@
-[![NPM](https://nodei.co/npm/turtlecoin-rpc.png?downloads=true&stars=true)](https://nodei.co/npm/turtlecoin-rpc/)
+# Roto2Coin RPC API
 
-[![Build Status](https://travis-ci.org/brandonlehmann/turtlecoin-rpc.png?branch=master)](https://travis-ci.org/brandonlehmann/turtlecoin-rpc) [![Build Status](https://ci.appveyor.com/api/projects/status/github/brandonlehmann/turtlecoin-rpc?branch=master&svg=true)](https://ci.appveyor.com/project/brandonlehmann/turtlecoin-rpc/branch/master)
-
-# TurtleCoin RPC API
-
-This project is designed to make it very easy to interact with various RPC APIs available within the [TurtleCoin](https://turtlecoin.lol) Project. This entire project uses [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) to make things fast, easy, and safe.
+This project is designed to make it very easy to interact with various RPC APIs available within the [Roto2Coin](https://roto2coin.me) Project. This entire project uses [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) to make things fast, easy, and safe.
 
 ## Table of Contents
 
 1. [Dependencies](#dependencies)
 2. [Installation](#installation)
 3. [Intialization](#intialization)
-4. [TurtleCoind RPC API Interface](#turtlecoind-rpc-api-interface)
-5. [TurtleService RPC API Interface](#turtleservice-rpc-api-interface)
+4. [Roto2Coind RPC API Interface](#roto2coind-rpc-api-interface)
+5. [Roto2Service RPC API Interface](#roto2service-rpc-api-interface)
 6. [Client RPC API Interface](#client-rpc-api-interface)
 
 ## Dependencies
 
 * [NodeJS v8.x](https://nodejs.org) >= 8.x
-* [TurtleCoin](https://github.com/turtlecoin/turtlecoin/releases) >= v0.8.4
+* [Roto2Coin](https://github.com/roto2coin/roto2coin/releases) >= v0.0.3
 
 ## Installation
 
 ```bash
-npm install turtlecoin-rpc
+npm install roto2coin-rpc
 ```
 
 ## Intialization
 
-### TurtleCoind
+### Roto2Coind
 ```javascript
-const TurtleCoind = require('turtlecoin-rpc').TurtleCoind
+const Roto2Coind = require('roto2coin-rpc').Roto2Coind
 
-const daemon = new TurtleCoind({
-  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
-  port: 11898, // what port is the RPC server running on
+const daemon = new Roto2Coind({
+  host: '127.0.0.1', // ip address or hostname of the Roto2Coind host
+  port: 13000, // what port is the RPC server running on
   timeout: 2000, // request timeout
   ssl: false // whether we need to connect using SSL/TLS
 })
 ```
 
-### TurtleService
+### Roto2Service
 ```javascript
-const TurtleService = require('turtlecoin-rpc').TurtleService
+const Roto2Service = require('roto2coin-rpc').Roto2Service
 
-const service = new TurtleService({
-  host: '127.0.0.1', // ip address or hostname of the turtle-service host
-  port: 8070, // what port is turtle-service running on
+const service = new Roto2Service({
+  host: '127.0.0.1', // ip address or hostname of the roto2-service host
+  port: 8070, // what port is roto2-service running on
   timeout: 2000, // request timeout
   ssl: false, // whether we need to connect using SSL/TLS
-  rpcPassword: 'changeme', // must be set to the password used to run turtle-service
+  rpcPassword: 'changeme', // must be set to the password used to run roto2-service
 
   // RPC API default values
   defaultMixin: false, // the default mixin to use for transactions, the default setting is false which means we don't have a default value
@@ -64,19 +60,19 @@ const service = new TurtleService({
 
 ### Client
 ```javascript
-const Client = require('turtlecoin-rpc').Client
+const Client = require('roto2coin-rpc').Client
 
 const client = new Client({
-  host: '127.0.0.1', // ip address or hostname of the TurtleCoind host
-  port: 11898, // what port is the RPC server running on
+  host: '127.0.0.1', // ip address or hostname of the Roto2Coind host
+  port: 13000, // what port is the RPC server running on
   timeout: 2000, // request timeout
   ssl: false // whether we need to connect using SSL/TLS
 })
 ```
 
-## TurtleCoind RPC API Interface
+## Roto2Coind RPC API Interface
 
-We expose all of the `TurtleCoind` RPC API commands via the ```TurtleCoind``` interface. Each of the below methods are [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises). For safety sake, **always** handle your promise catches as we do use them properly.
+We expose all of the `Roto2Coind` RPC API commands via the ```Roto2Coind``` interface. Each of the below methods are [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises). For safety sake, **always** handle your promise catches as we do use them properly.
 
 Methods noted having options have parameters that may be *optional* or *required* as documented.
 
@@ -755,9 +751,9 @@ daemon.fee().then((result) => {
 }
 ```
 
-## TurtleService RPC API Interface
+## Roto2Service RPC API Interface
 
-We expose all of the `turtle-service` RPC API commands via the ```TurtleService``` interface. Each of the below methods are [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises). For safety sake, **always** handle your promise catches as we do use them properly.
+We expose all of the `roto2-service` RPC API commands via the ```Roto2Service``` interface. Each of the below methods are [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises). For safety sake, **always** handle your promise catches as we do use them properly.
 
 ***Special Note:*** Any and all amounts/fees will already be in HUMAN readable units. DO NOT DIVIDE THEM AGAIN unless you've specified ```decimalDivisor``` as ```1``` in the options. You have been warned.
 
@@ -1460,7 +1456,7 @@ TRTLTyPSXMZB5j2wbztMzRXu2rVCuNVLUb4WKARRZY9ficYWshMDy7p4MXEz24mkyb4KFDVksDj41XTJ
 
 ## Client RPC API Interface
 
-We expose all of the `TurtleCoind` Client RPC API commands via the ```Client``` interface. Each of the below methods are [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises). For safety sake, **always** handle your promise catches as we do use them properly.
+We expose all of the `Roto2Coind` Client RPC API commands via the ```Client``` interface. Each of the below methods are [Javascript Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises). For safety sake, **always** handle your promise catches as we do use them properly.
 
 Methods noted having options have parameters that may be *optional* or *required* as documented.
 
@@ -3076,7 +3072,7 @@ client.getTransactionHashesByPaymentId({
 ## License
 
 ```
-Copyright (C) 2018 Brandon Lehmann, The TurtleCoin Developers
+Copyright (C) 2018 Brandon Lehmann, The Roto2Coin Developers
 
 Please see the included LICENSE file for more information.
 ```

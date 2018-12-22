@@ -1,11 +1,12 @@
-// Copyright (c) 2018, Brandon Lehmann, The TurtleCoin Developers
+// Copyright (c) 2018, Bkkite, The Roto2Coin Developers
+// [Original] Copyright (c) 2018, Brandon Lehmann, The TurtleCoin Developers
 //
 // Please see the included LICENSE file for more information.
 
 'use strict'
 
-module.exports.TurtleCoind = require('./lib/turtlecoind-rpc.js')
-module.exports.TurtleService = require('./lib/service-rpc.js')
+module.exports.Roto2Coind = require('./lib/roto2coind-rpc.js')
+module.exports.Roto2Service = require('./lib/service-rpc.js')
 module.exports.Client = require('./lib/client-rpc.js')
 
 // These exports will be deprecated in a future version.

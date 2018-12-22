@@ -1,26 +1,26 @@
 {
-  "name": "turtlecoin-rpc",
+  "name": "roto2coin-rpc",
   "version": "0.8.7",
-  "description": "TurtleCoin RPC API Interface in NodeJS",
+  "description": "Roto2Coin RPC API Interface in NodeJS",
   "main": "index.js",
   "scripts": {
     "test": "standard"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brandonlehmann/turtlecoin-rpc.git"
+    "url": "git+https://github.com/bkkite/roto2coin-rpc.git"
   },
   "keywords": [
-    "TurtleCoin",
+    "Roto2Coin",
     "RPC",
     "API"
   ],
   "author": "Brandon Lehmann <brandonlehmann@gmail.com>",
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/brandonlehmann/turtlecoin-rpc/issues"
+    "url": "https://github.com/bkkite/roto2coin-rpc/issues"
   },
-  "homepage": "https://github.com/brandonlehmann/turtlecoin-rpc#readme",
+  "homepage": "https://github.com/bkkite/roto2coin-rpc#readme",
   "dependencies": {
     "request": "^2.88.0",
     "request-promise-native": "^1.0.5"
