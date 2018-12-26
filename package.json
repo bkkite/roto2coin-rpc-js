@@ -1,5 +1,5 @@
 {
-  "name": "@bkkite/roto2coin-rpc",
+  "name": "roto2coin-rpc",
   "version": "0.0.3",
   "description": "Roto2Coin RPC API Interface in NodeJS",
   "main": "index.js",
