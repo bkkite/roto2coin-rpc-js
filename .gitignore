@@ -137,6 +137,13 @@ Temporary Items
 .idea/**/sqlDataSources.xml
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/codeStyles/Project.xml
+.idea/roto2coin-rpc-js.iml
+.idea/vcs.xml
 
 # Gradle:
 .idea/**/gradle.xml
